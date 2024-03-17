@@ -1,0 +1,191 @@
+import time
+from selenium.webdriver.support.select import Select
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.implicitly_wait(3)
+driver.get("https://practice.automationtesting.in/")
+wait = WebDriverWait(driver, 20)
+
+#Задание 4 слайд 97
+# btn_my_account = driver.find_element_by_id("menu-item-50")
+# btn_my_account.click()
+# login = driver.find_element_by_id("username")
+# login.send_keys("tester@contoso.com")
+# passwd = driver.find_element_by_id("password")
+# passwd.send_keys("P@ssw0rd-tro-lo-lo")
+# btn_login = driver.find_element_by_name("login")
+# btn_login.click()
+# btn_shop = driver.find_element_by_id("menu-item-40")
+# btn_shop.click()
+# btn_html5_book = driver.find_element_by_css_selector(".products.masonry-done li:nth-child(3) h3")
+# btn_html5_book.click()
+# check_name = driver.find_element_by_css_selector(".product_title.entry-title")
+# check_name_get_text = check_name.text
+# assert check_name_get_text == "HTML5 Forms"
+
+#Задание 5 слайд 98
+# btn_my_account = driver.find_element_by_id("menu-item-50")
+# btn_my_account.click()
+# login = driver.find_element_by_id("username")
+# login.send_keys("tester@contoso.com")
+# passwd = driver.find_element_by_id("password")
+# passwd.send_keys("P@ssw0rd-tro-lo-lo")
+# btn_login = driver.find_element_by_name("login")
+# btn_login.click()
+# btn_shop = driver.find_element_by_id("menu-item-40")
+# btn_shop.click()
+# btn_html = driver.find_element_by_css_selector(".cat-item.cat-item-19 a")
+# btn_html.click()
+# html_books_count = driver.find_elements_by_css_selector(".products.masonry-done li")
+# assert len(html_books_count) == 3
+
+#Задание 6 слайд 99
+# btn_my_account = driver.find_element_by_id("menu-item-50")
+# btn_my_account.click()
+# login = driver.find_element_by_id("username")
+# login.send_keys("tester@contoso.com")
+# passwd = driver.find_element_by_id("password")
+# passwd.send_keys("P@ssw0rd-tro-lo-lo")
+# btn_login = driver.find_element_by_name("login")
+# btn_login.click()
+# btn_shop = driver.find_element_by_id("menu-item-40")
+# btn_shop.click()
+# check_selector_sort = driver.find_element_by_css_selector(".orderby [value='menu_order']")
+# check_selector_atr = check_selector_sort.get_attribute("selected")
+# assert check_selector_atr == "true"
+# sotr_price = driver.find_element_by_class_name("orderby")
+# select = Select(sotr_price)
+# select.select_by_visible_text("Sort by price: low to high")
+# check_selector_sort = driver.find_element_by_css_selector(".orderby [value='price']")
+# check_selector_atr = check_selector_sort.get_attribute("selected")
+# assert check_selector_atr == "true"
+
+#Задание 7 слайд 100
+# btn_my_account = driver.find_element_by_id("menu-item-50")
+# btn_my_account.click()
+# login = driver.find_element_by_id("username")
+# login.send_keys("tester@contoso.com")
+# passwd = driver.find_element_by_id("password")
+# passwd.send_keys("P@ssw0rd-tro-lo-lo")
+# btn_login = driver.find_element_by_name("login")
+# btn_login.click()
+# btn_shop = driver.find_element_by_id("menu-item-40")
+# btn_shop.click()
+# book_Andr_quick = driver.find_element_by_css_selector(".products.masonry-done li:nth-child(1) .woocommerce-LoopProduct-link")
+# book_Andr_quick.click()
+# old_price = driver.find_element_by_css_selector(".price del .woocommerce-Price-amount.amount")
+# old_price_text = old_price.text
+# assert old_price_text == "₹600.00"
+# new_price = driver.find_element_by_css_selector(".price ins .woocommerce-Price-amount.amount")
+# new_price_text = new_price.text
+# assert new_price_text == "₹450.00"
+# wait = WebDriverWait(driver, 10)
+# check_preview_img = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".images img")))
+# preview_img = driver.find_element_by_css_selector(".images img")
+# preview_img.click()
+# check_btn_close_img = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "pp_close")))
+# btn_close = driver.find_element_by_class_name("pp_close")
+# time.sleep(3)
+# btn_close.click()
+
+#Задание 8 слайд 101
+# btn_shop = driver.find_element_by_id("menu-item-40")
+# btn_shop.click()
+# btn_add_book = driver.find_element_by_css_selector(".products.masonry-done li:nth-child(4) a:nth-child(2)")
+# btn_add_book.click()
+# time.sleep(3)
+# count_item = driver.find_element_by_css_selector(".wpmenucart-contents span.cartcontents")
+# count_item_text = count_item.text
+# assert count_item_text == "1 Item"
+# price_item = driver.find_element_by_css_selector(".wpmenucart-contents span.amount")
+# price_item_text = price_item.text
+# assert price_item_text == "₹180.00"
+# btn_cart = driver.find_element_by_class_name("wpmenucart-contents")
+# btn_cart.click()
+# wait = WebDriverWait(driver, 10)
+# check_subtotal= wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".cart-subtotal .woocommerce-Price-amount"), "₹180.00"))
+# check_total= wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".order-total .woocommerce-Price-amount"), "₹183.60"))
+
+#Задание 9 слайд 102
+# btn_shop = driver.find_element_by_id("menu-item-40")
+# btn_shop.click()
+# btn_add_book_html = driver.find_element_by_css_selector(".products.masonry-done li:nth-child(4) a:nth-child(2)")
+# btn_add_book_html.click()
+# driver.execute_script("window.scrollBy(0, 300);")
+# time.sleep(2)
+# btn_add_book_js = driver.find_element_by_css_selector(".products.masonry-done li:nth-child(5) a:nth-child(2)")
+# btn_add_book_js.click()
+# time.sleep(2)
+# btn_cart = driver.find_element_by_class_name("wpmenucart-contents")
+# btn_cart.click()
+# time.sleep(2)
+# del_first_book = driver.find_element_by_css_selector(".shop_table.shop_table_responsive.cart .cart_item:nth-child(1) .remove")
+# del_first_book.click()
+# time.sleep(3)
+# brn_undo = driver.find_element_by_css_selector(".woocommerce-message a")
+# brn_undo.click()
+# quantity = driver.find_element_by_css_selector(".shop_table.shop_table_responsive.cart .cart_item:nth-child(1) .input-text.qty.text")
+# quantity.clear()
+# quantity.send_keys("3")
+# btn_update = driver.find_element_by_css_selector(".actions .button:nth-child(2)")
+# btn_update.click()
+# quantity_values = quantity.get_attribute("value")
+# assert quantity_values == "3"
+# time.sleep(2)
+# btn_coupon = driver.find_element_by_css_selector(".actions div .button")
+# btn_coupon.click()
+# wait = WebDriverWait(driver, 10)
+# check_msg_coup= wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".woocommerce-error li"), "Please enter a coupon code."))
+
+#Задание 10 слайд 103
+btn_shop = driver.find_element_by_id("menu-item-40")
+btn_shop.click()
+driver.execute_script("window.scrollBy(0, 300);")
+btn_add_book_html = driver.find_element_by_css_selector(".products.masonry-done li:nth-child(4) a:nth-child(2)")
+btn_add_book_html.click()
+time.sleep(2)
+btn_cart = driver.find_element_by_class_name("wpmenucart-contents")
+btn_cart.click()
+check_btn_checkout = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".wc-proceed-to-checkout a")))
+btn_checkout = driver.find_element_by_css_selector(".wc-proceed-to-checkout a")
+btn_checkout.click()
+check_first_name = wait.until(EC.element_to_be_clickable((By.ID, "billing_first_name")))
+first_name = driver.find_element_by_id("billing_first_name")
+first_name.send_keys("Tester")
+last_name = driver.find_element_by_id("billing_last_name")
+last_name.send_keys("Testerov")
+email = driver.find_element_by_id("billing_email")
+email.send_keys("tester@contoso.com")
+phone = driver.find_element_by_id("billing_phone")
+phone.send_keys("666666")
+country = driver.find_element_by_id("s2id_billing_country")
+country.click()
+country_send = driver.find_element_by_id("s2id_autogen1_search")
+country_send.send_keys("Russia")
+country_send_ru = driver.find_element_by_class_name("select2-result-label")
+country_send_ru.click()
+address = driver.find_element_by_id("billing_address_1")
+address.send_keys("Tesovaya")
+town = driver.find_element_by_id("billing_city")
+town.send_keys("Big Tester")
+state = driver.find_element_by_id("billing_state")
+state.send_keys("Ne Pridumal")
+postcode = driver.find_element_by_id("billing_postcode")
+postcode.send_keys("123321")
+driver.execute_script("window.scrollBy(0, 600);")
+time.sleep(2)
+payment = driver.find_element_by_id("payment_method_cheque")
+payment.click()
+btn_order = driver.find_element_by_id("place_order")
+btn_order.click()
+check_msg_order= wait.until(EC.text_to_be_present_in_element((By.CLASS_NAME, "woocommerce-thankyou-order-received"), "Thank you. Your order has been received."))
+check_msg_pay= wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".shop_table tfoot tr:nth-child(3) td"), "Check Payments"))
+
+
+time.sleep(5)
+driver.quit()
